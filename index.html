@@ -6,6 +6,15 @@
     <title>GenZ 2026 Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Spline+Sans+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      // Polyfill for process.env to prevent crashes in client-side code
+      window.process = {
+        env: {
+          NODE_ENV: 'development',
+          API_KEY: '' // This will be overridden by the actual environment or key selector
+        }
+      };
+    </script>
     <style>
       body {
         font-family: 'Outfit', sans-serif;
